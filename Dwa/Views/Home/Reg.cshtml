@@ -1,0 +1,32 @@
+﻿@using Dwa.Models
+@model Dwa.Models.Data
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Добавление пользователя";
+}
+@section Reg { 
+<div id="add-new-emp" class="add-new-employee row d-none">
+    <div class="add-card-form card text-center col-md-6 col-sm-12 align-self-center">
+        <div class="card-body">
+            <h4 class="card-title">Добавить сотрудника:</h4>
+            <form asp-action="Reg" asp-controller="home" method="POST">
+                <div class="form-group">
+                    <input type="text" asp-for="Name" class="form-control" placeholder="Фамилия" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" asp-for="Surname" class="form-control" placeholder="Имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" asp-for="Midlename" class="form-control" placeholder="Отчество" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" asp-for="Position" class="form-control" placeholder="Должность" required>
+                </div>
+                <div class="form-group text-right">
+                    <button type="submit" id="form_submit" class="btn btn-primary">Добавить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+}
